@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fruits = ["apple", "strawberry", "banana", "orange", "mango"];
+
+        // a
+        var allStrings = fruits.every(function(fruit) {
+            return typeof fruit === "string";
+        });
+        console.log(allStrings);
+
+        // b
+        var startsWithA = fruits.some(function(fruit) {
+            return fruit.startsWith("a");
+        });
+        console.log(startsWithA);
+
+        // c
+        var filteredFruits = fruits.filter(function(fruit) {
+            return fruit.startsWith("b") || fruit.startsWith("s");
+        });
+        console.log(filteredFruits);
+
+        // d
+        var likedFruits = fruits.map(function(fruit) {
+            return "I like " + fruit;
+        });
+        console.log(likedFruits);
+
+        // e
+        likedFruits.forEach(function(fruit) {
+            console.log(fruit);
+        });
+    </script>
+    
+</body>
+</html>
